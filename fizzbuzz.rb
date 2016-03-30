@@ -31,12 +31,12 @@ class NilClass
   end
 end
 
-(1..100).each do |i|
-  number = ""
-  (i % 3 == 0).if_true { number += "Fizz" }
-  (i % 5 == 0).if_true { number += "Buzz" }
+(1..100).each do |number|
+  word = ""
+  (number % 3 == 0).if_true { word += "Fizz" }
+  (number % 5 == 0).if_true { word += "Buzz" }
 
-  (number.empty?).
-    if_true { puts i }.
-    if_false { puts number }
+  (word.empty?).
+    if_true { puts number }.
+    if_false { puts word }
 end
